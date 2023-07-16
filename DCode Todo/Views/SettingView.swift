@@ -41,7 +41,7 @@ struct SettingView: View {
                     }
                 }
                 
-                Section(header: Text("Settings").bold()) {
+                Section(header: Text("Language").bold()) {
                     NavigationLink(destination: LanguageSelectionView()) {
                         Text("Change Language")
                             .foregroundColor(Color.mint)

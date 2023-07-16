@@ -9,7 +9,13 @@
 "Account opened date" = "အကောင့်ဖွင့်ရက်";
 "Password" = "စကားဝှက်";
 "Display" = "ပြသခြင်း";
-"System setting will use the current device theme" = "စနစ်ဆက်တင်သည် လက်ရှိစက်ပစ္စည်းအပြင်အဆင်ကို အသုံးပြုမည်ဖြစ်သည်";
-"Please press the button to sign out" = "ထွက်ရန် ခလုတ်ကို နှိပ်ပါ";
+"System setting will use the current device theme." = "စနစ်ဆက်တင်သည် လက်ရှိစက်ပစ္စည်းအပြင်အဆင်ကို အသုံးပြုမည်ဖြစ်သည်.";
+"Please press the button to sign out!👀" = "ထွက်ရန် ခလုတ်ကို နှိပ်ပါ!👀";
 "English" = "အင်္ဂလိပ်";
 "Thai" = "ထိုင်း";
+"About" = "အကြောင်း";
+"View Profile" = "ပရိုဖိုင်ကိုကြည့်ရှုပါ";
+"Burmese" = "မြန်မာ";
+"Language" = "ဘာသာစကား";
+"Change Language" = "ဘာသာစကားပြောင်းပါ";
+"Account Information" = "အကောင့်အချက်အလက်";

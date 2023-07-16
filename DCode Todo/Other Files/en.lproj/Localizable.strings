@@ -8,8 +8,14 @@
 "Email" = "Email";
 "Account opened date" = "Account opened date";
 "Password" = "Password";
-"Display" = "Display";
-"System setting will use the current device theme" = "System setting will use the current device theme";
-"Please press the button to sign out" = "Please press the button to sign out";
+"DISPLAY" = "DISPLAY";
+"System setting will use the current device theme." = "System setting will use the current device theme.";
+"Please press the button to sign out!👀" = "Please press the button to sign out!👀";
 "English" = "English";
 "Thai" = "Thai";
+"About" = "About";
+"View Profile" = "View Profile";
+"Burmese" = "Burmese";
+"Language" = "Language";
+"Change Language" = "Change Language";
+"Account Information" = "Account Information";

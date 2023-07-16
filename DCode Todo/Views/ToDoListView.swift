@@ -29,6 +29,7 @@ struct ToDoListView: View {
                                     viewModel.delete(id: item.id)
                                 }
                                 .tint(Color.red)
+                                .animation(.easeOut(duration: 0.5))
                             }
                     }
                 }

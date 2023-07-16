@@ -92,11 +92,11 @@ struct InfoView: View {
                                 .foregroundColor(.purple)
                         }
                     }
-                    Text("About Me🧑🏻‍💻")
+                    Text("Skills🧑🏻‍💻")
                         .fontWeight(.bold)
                         .foregroundColor(Color.primary)
                         .font(.system(size: 30))
-                    Text("Learning and absorbing as much as I could.")
+                    Text("Html, Css, Java Script, Java, Kotlin, Python, Swift")
                         .font(.system(.title2))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
