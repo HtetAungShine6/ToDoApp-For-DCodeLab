@@ -98,7 +98,7 @@ struct InfoView: View {
                         .font(.system(size: 30))
                     Text("Html, Css, Java Script, Java, Kotlin, Python, Swift")
                         .font(.system(.title2))
-                        .foregroundColor(.white)
+                        .foregroundColor(.primary)
                         .multilineTextAlignment(.center)
                 }
             }
