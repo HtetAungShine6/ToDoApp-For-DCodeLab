@@ -76,10 +76,10 @@ struct LanguageSelectionView_Previews: PreviewProvider {
     }
 }
 
-extension Bundle {
-    // Function to set the app's language
-    static func setLanguage(_ languageCode: String) {
-        UserDefaults.standard.set([languageCode], forKey: "AppleLanguages")
-        UserDefaults.standard.synchronize()
-    }
-}
+//extension Bundle {
+//    // Function to set the app's language
+//    static func setLanguage(_ languageCode: String) {
+//        UserDefaults.standard.set([languageCode], forKey: "AppleLanguages")
+//        UserDefaults.standard.synchronize()
+//    }
+//}

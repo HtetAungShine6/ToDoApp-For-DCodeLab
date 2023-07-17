@@ -14,7 +14,7 @@ struct NewItemView: View {
     
     var body: some View {
         VStack{
-            Text("New Item")
+            Text("Add Your Todos")
                 .font(.system(size: 32))
                 .bold()
                 .padding()
