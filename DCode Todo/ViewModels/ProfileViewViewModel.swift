@@ -23,6 +23,7 @@ class ProfileViewViewModel : ObservableObject{
         let db = Firestore.firestore()
         db.collection("users")
             .document(userId)
+        //read query
             .getDocument{[weak self] snapshot, error in
                 guard let data = snapshot?.data(), error == nil else{
                     return
