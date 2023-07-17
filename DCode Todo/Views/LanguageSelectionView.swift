@@ -18,7 +18,9 @@ struct LanguageSelectionView: View {
                     Button(action: {
                         appLanguage = "English"
                         setAppLanguage("English")
-                        presentationMode.wrappedValue.dismiss()
+                        DispatchQueue.main.async {
+                            presentationMode.wrappedValue.dismiss()
+                        }
                     }) {
                         HStack {
                             Text("English")
@@ -32,7 +34,9 @@ struct LanguageSelectionView: View {
                     Button(action: {
                         appLanguage = "Thai"
                         setAppLanguage("th")
-                        presentationMode.wrappedValue.dismiss()
+                        DispatchQueue.main.async {
+                            presentationMode.wrappedValue.dismiss()
+                        }
                     }) {
                         HStack {
                             Text("Thai")
@@ -46,7 +50,9 @@ struct LanguageSelectionView: View {
                     Button(action: {
                         appLanguage = "Burmese"
                         setAppLanguage("my")
-                        presentationMode.wrappedValue.dismiss()
+                        DispatchQueue.main.async {
+                            presentationMode.wrappedValue.dismiss()
+                        }
                     }) {
                         HStack {
                             Text("Burmese")

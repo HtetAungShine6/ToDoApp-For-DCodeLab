@@ -35,6 +35,7 @@ struct ProfileView: View {
         VStack(alignment: .center){
             Image("profile")
                 .resizable()
+                .clipShape(Circle())
                 .aspectRatio(contentMode: .fill)
                 .foregroundColor(Color.mint)
                 .frame(width: 150, height: 180)

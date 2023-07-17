@@ -18,6 +18,7 @@ class ToDoListItemViewViewModel : ObservableObject{
         var itemCopy = item
         itemCopy.setDone(!item.isDone)
         
+        //get the current user
         guard let uid = Auth.auth().currentUser?.uid
         else{
             return
