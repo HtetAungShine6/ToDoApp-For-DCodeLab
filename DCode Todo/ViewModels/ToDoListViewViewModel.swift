@@ -3,9 +3,10 @@ import FirebaseFirestore
 
 class ToDoListViewViewModel : ObservableObject{
     @Published var showingNewItemView = false
-    
+    @Published var items: [ToDoListItem] = []
     private let userId: String
-    
+
+    //reusability
     init(userId: String){
         self.userId = userId
     }
@@ -18,5 +19,5 @@ class ToDoListViewViewModel : ObservableObject{
             .document(id)
             .delete()
     }
-}
 
+}

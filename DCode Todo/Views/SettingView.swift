@@ -12,10 +12,6 @@ struct SettingView: View {
     @StateObject var viewModel = ProfileViewViewModel()
     @AppStorage("isDarkMode") private var isDarkMode = false
     
-//    init(){
-//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.systemMint]
-//    }
-    
     var body: some View {
         NavigationView{
             
@@ -62,7 +58,6 @@ struct SettingView: View {
                 }
             }
             .navigationTitle("Setting")
-//            .navigationBarTitle (Text("TEST"), displayMode: .inline)
         }
     }
 }

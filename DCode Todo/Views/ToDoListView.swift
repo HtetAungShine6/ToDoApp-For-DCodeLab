@@ -13,6 +13,7 @@ struct ToDoListView: View {
     @StateObject var viewModel: ToDoListViewViewModel
     @FirestoreQuery var items: [ToDoListItem]
 
+    //the ToDoListView can access and retrieve user-specific todo items from Firestore
     init(userId: String) {
         self._items = FirestoreQuery(collectionPath: "users/\(userId)/todos")
         self._viewModel = StateObject(wrappedValue: ToDoListViewViewModel(userId: userId))
@@ -33,7 +34,7 @@ struct ToDoListView: View {
                             }
                     }
                 }
-                .listStyle(.automatic)
+                .listStyle(.plain)
             }
             .navigationTitle("To Do List")
             .foregroundColor(Color.primary)

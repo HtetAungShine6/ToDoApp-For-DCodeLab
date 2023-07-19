@@ -30,7 +30,6 @@ struct MainView: View {
             SettingView()
                 .tabItem{
                     Label("Setting", systemImage: "gearshape.fill")
-                    
                 }
             InfoView()
                 .tabItem{

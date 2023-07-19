@@ -39,7 +39,7 @@ struct NewItemView: View {
                 .padding()
             }
             .alert(isPresented: $viewModel.showAlert){
-                Alert(title: Text("Error"), message: Text("Please fill in all fields and select due date that is today or newer!"))
+                Alert(title: Text("Error"), message: Text("📆Please select the date that is newer than yesterday!🙏"))
             }
         }
     }

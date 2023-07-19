@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import FirebaseAuth //for logging in with email and psw
+//for logging in with email and psw
+import FirebaseAuth
 
 class LoginViewViewModel : ObservableObject{
     
@@ -25,17 +26,6 @@ class LoginViewViewModel : ObservableObject{
         
         //LogIn
         Auth.auth().signIn(withEmail: email, password: password)
-//        { [weak self] result, error in
-//            guard let self = self else { return }
-//
-//            if let error = error {
-//                self.errorMessage = error.localizedDescription
-//                self.showAlert = true
-//            } else {
-//                // Login successful
-//                // You can perform additional actions here, such as navigating to another screen
-//            }
-//        }
     }
     
     private func validate() -> Bool{

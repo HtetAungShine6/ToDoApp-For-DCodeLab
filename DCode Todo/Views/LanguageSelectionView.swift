@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LanguageSelectionView: View {
     @Environment(\.presentationMode) var presentationMode
-    @AppStorage("appLanguage") var appLanguage = "English" // App language default value is English
+    //default language
+    @AppStorage("appLanguage") var appLanguage = "English"
     
     var body: some View {
         VStack {
@@ -81,11 +82,3 @@ struct LanguageSelectionView_Previews: PreviewProvider {
         LanguageSelectionView()
     }
 }
-
-//extension Bundle {
-//    // Function to set the app's language
-//    static func setLanguage(_ languageCode: String) {
-//        UserDefaults.standard.set([languageCode], forKey: "AppleLanguages")
-//        UserDefaults.standard.synchronize()
-//    }
-//}

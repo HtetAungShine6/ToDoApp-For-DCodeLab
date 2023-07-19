@@ -17,6 +17,7 @@ class ProfileViewViewModel : ObservableObject{
     @Published var user: User? = nil
     
     func fetchUser(){
+        //get the current user
         guard let userId = Auth.auth().currentUser?.uid else{
             return
         }

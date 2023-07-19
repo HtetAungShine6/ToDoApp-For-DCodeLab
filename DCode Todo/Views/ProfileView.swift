@@ -10,11 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     
     @StateObject var viewModel = ProfileViewViewModel()
-    //    init(){
-    //        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.systemMint]
-    //    }
+    
     var body: some View {
-        //        NavigationView{
         VStack{
             if let user = viewModel.user{
                 profile(user: user)
@@ -23,8 +20,7 @@ struct ProfileView: View {
                     .foregroundColor(Color.orange)
             }
         }
-        .foregroundColor(Color.orange)
-        
+        .foregroundColor(Color.primary)
         .onAppear{
             viewModel.fetchUser()
         }
@@ -44,41 +40,38 @@ struct ProfileView: View {
             Text("Account Information")
                 .font(.title)
                 .bold()
-                
+                .foregroundColor(Color.mint)
+            
             List{
-    //            VStack(alignment: .leading){
-    //
-    //            }
                 HStack{
                     Text("Id : ")
                         .bold()
-                        .foregroundColor(Color.mint)
+                        .foregroundColor(Color.orange)
                     Text(user.id)
                 }
                 .padding()
                 HStack{
                     Text("Name : ")
                         .bold()
-                        .foregroundColor(Color.mint)
+                        .foregroundColor(Color.orange)
                     Text(user.name)
                 }
                 .padding()
                 HStack{
                     Text("Email : ")
                         .bold()
-                        .foregroundColor(Color.mint)
+                        .foregroundColor(Color.orange)
                     Text(user.email)
                 }
                 .padding()
                 HStack{
                     Text("Account opened date : ")
                         .bold()
-                        .foregroundColor(Color.mint)
+                        .foregroundColor(Color.orange)
                     Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .shortened))")
                 }
                 .padding()
             }.listStyle(.insetGrouped)
-//            Spacer()
         }
     }
 }

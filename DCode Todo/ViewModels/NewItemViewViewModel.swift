@@ -46,12 +46,6 @@ class NewItemViewViewModel : ObservableObject{
             .setData(newItem.asDictionary())
     }
     
-//    func edit(item: ToDoListItem) {
-//        title = item.title
-//        dueDate = Date(timeIntervalSince1970: item.dueDate)
-//    }
-
-    
     var canSave: Bool{
         guard !title.trimmingCharacters(in: .whitespaces).isEmpty else{
             return false
@@ -62,23 +56,3 @@ class NewItemViewViewModel : ObservableObject{
         return true
     }
 }
-
-
-//func edit(){
-//    guard let uId = Auth.auth().currentUser?.uid else{
-//        return
-//    }
-//    let userId = UUID().uuidString
-//    let items = ToDoListItem(id: userId,
-//                            title: title,
-//                            dueDate: dueDate.timeIntervalSince1970,
-//                            createdDate: Date().timeIntervalSince1970,
-//                            isDone: false)
-//
-//    let db = Firestore.firestore()
-//    db.collection("users")
-//        .document(uId)
-//        .collection("todos")
-//        .document(userId)
-//        .updateData(items.asDictionary())
-//}

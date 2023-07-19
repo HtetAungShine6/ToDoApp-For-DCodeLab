@@ -12,24 +12,28 @@ struct ToDoListItemView: View {
     let item: ToDoListItem
     
     var body: some View {
-        HStack{
-            Button{
-                viewModel.toggleIsDone(item: item)
-            }label: {
-                Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
-                    .foregroundColor(item.isDone ? .mint : .orange)
-            }.animation(.easeIn(duration: 0.5))
-            
-            VStack(alignment: .leading){
-                Text(item.title)
-                    .font(.title3)
-                    .bold()
-                Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))")
-                    .font(.footnote)
-                    .foregroundColor(Color(.secondaryLabel))
+            HStack{
+                Button{
+                    viewModel.toggleIsDone(item: item)
+                }label: {
+                    Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
+                        .foregroundColor(item.isDone ? .mint : .orange)
+                }.animation(.easeIn(duration: 0.5))
+                
+                VStack(alignment: .leading){
+                    Text(item.title)
+                        .font(.title3)
+                        .bold()
+                    Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))")
+                        .font(.footnote)
+                        .foregroundColor(Color(.secondaryLabel))
+                }
+                .padding()
+                .strikethrough(item.isDone ? true : false)
+                .foregroundColor(item.isDone ? .orange : .black)
+                .animation(.easeOut(duration: 0.5))
+                Spacer()
             }
-            Spacer()
-        }
     }
 }
 
