@@ -8,14 +8,14 @@
 import Foundation
 extension Encodable{
     func asDictionary() -> [String: Any]{
+        //converting into json
         guard let data = try? JSONEncoder().encode(self)
         else{
             return [:]
         }
         
-        //once we get data from data, convert into json
+        //putting json data into dictionary using serialization
         do{
-            //json=dictionary
             let json = try JSONSerialization.jsonObject(with: data) as? [String: Any]
             return json ?? [:]
         }catch{

@@ -11,6 +11,7 @@ class ToDoListViewViewModel : ObservableObject{
         self.userId = userId
     }
 
+    //delete data from database
     func delete(id: String){
         let db = Firestore.firestore()
         db.collection("users")

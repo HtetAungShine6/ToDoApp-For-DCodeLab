@@ -9,13 +9,15 @@ import SwiftUI
 
 struct LanguageSelectionView: View {
     @Environment(\.presentationMode) var presentationMode
+    
     //default language
     @AppStorage("appLanguage") var appLanguage = "English"
     
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Language")) {
+                Section(header: Text("Language").bold()) {
+                    //english
                     Button(action: {
                         appLanguage = "English"
                         setAppLanguage("English")
@@ -32,6 +34,7 @@ struct LanguageSelectionView: View {
                             }
                         }
                     }
+                    //thai
                     Button(action: {
                         appLanguage = "Thai"
                         setAppLanguage("th")
@@ -48,6 +51,7 @@ struct LanguageSelectionView: View {
                             }
                         }
                     }
+                    //burmese
                     Button(action: {
                         appLanguage = "Burmese"
                         setAppLanguage("my")

@@ -14,7 +14,7 @@ struct RegisterView: View {
         NavigationView{
             VStack{
                 
-                //Header
+                //header view
                 HeaderView(title: "Register",
                            subtitle: "Start organizing todos",
                            angle: 42,
@@ -22,18 +22,17 @@ struct RegisterView: View {
                            background: .orange,
                            background2: .mint)
                 
-                //Register Form
+                //register form
                 Form{
                     TextField("Full Name", text: $viewModel.name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .foregroundColor(Color.primary)
-                    //modifiers
                         .autocorrectionDisabled()
+                        .autocapitalization(.none)
                     
                     TextField("Email Adress", text: $viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .foregroundColor(Color.primary)
-                    //modifiers
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
                     
@@ -41,7 +40,7 @@ struct RegisterView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .foregroundColor(Color.primary)
                     TLButton(title: "Create an account", background: .orange){
-                        //Attempt registration
+                        //attempting registration
                         viewModel.register()
                     }
                     .padding()

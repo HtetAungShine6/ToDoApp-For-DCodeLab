@@ -33,6 +33,7 @@ class RegisterViewViewModel : ObservableObject{
         }
     }
     
+    //insert data into database
     private func insertUserRecord(id: String){
         //model
         let newUser = User(id: id, name: name, email: email, joined: Date().timeIntervalSince1970)
@@ -44,6 +45,7 @@ class RegisterViewViewModel : ObservableObject{
             .setData(newUser.asDictionary())
     }
     
+    //validation
     private func validate() -> Bool{
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
               !email.trimmingCharacters(in: .whitespaces).isEmpty,

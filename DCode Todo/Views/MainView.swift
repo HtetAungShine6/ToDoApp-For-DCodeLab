@@ -12,6 +12,7 @@ struct MainView: View {
     @StateObject var viewModel = MainViewViewModel()
     
     var body: some View {
+        //login state
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty{
             //signed in
             accountView
@@ -20,6 +21,7 @@ struct MainView: View {
         }
     }
     
+    //tabview(home view)
     @ViewBuilder
     var accountView: some View{
         TabView{

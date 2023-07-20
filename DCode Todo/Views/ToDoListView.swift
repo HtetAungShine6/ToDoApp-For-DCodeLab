@@ -13,7 +13,7 @@ struct ToDoListView: View {
     @StateObject var viewModel: ToDoListViewViewModel
     @FirestoreQuery var items: [ToDoListItem]
 
-    //the ToDoListView can access and retrieve user-specific todo items from Firestore
+    //ToDoListView can access and retrieve user-specific todo items from Firestore
     init(userId: String) {
         self._items = FirestoreQuery(collectionPath: "users/\(userId)/todos")
         self._viewModel = StateObject(wrappedValue: ToDoListViewViewModel(userId: userId))
@@ -23,6 +23,7 @@ struct ToDoListView: View {
         NavigationView {
             VStack {
                 List {
+                    //listing each items with ToDoListItemView
                     ForEach(items) { item in
                         ToDoListItemView(item: item)
                             .swipeActions {
@@ -38,6 +39,7 @@ struct ToDoListView: View {
             }
             .navigationTitle("To Do List")
             .foregroundColor(Color.primary)
+            //add todo lists items
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add") {
@@ -46,6 +48,7 @@ struct ToDoListView: View {
                     .tint(.mint)
                 }
             }
+            //presenting the add view sheet AKA NewItemView
             .sheet(isPresented: $viewModel.showingNewItemView) {
                 NewItemView(newItemPresented: $viewModel.showingNewItemView)
             }

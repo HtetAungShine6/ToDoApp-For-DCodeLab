@@ -16,6 +16,7 @@ struct ProfileView: View {
             if let user = viewModel.user{
                 profile(user: user)
             }else{
+                //loading process
                 Text("Loading Profile ... ")
                     .foregroundColor(Color.orange)
             }
@@ -26,6 +27,7 @@ struct ProfileView: View {
         }
     }
     
+    //biulding profile view
     @ViewBuilder
     func profile(user: User) -> some View{
         VStack(alignment: .center){

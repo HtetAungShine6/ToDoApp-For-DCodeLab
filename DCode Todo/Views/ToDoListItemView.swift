@@ -13,6 +13,7 @@ struct ToDoListItemView: View {
     
     var body: some View {
             HStack{
+                //check button
                 Button{
                     viewModel.toggleIsDone(item: item)
                 }label: {
@@ -20,17 +21,19 @@ struct ToDoListItemView: View {
                         .foregroundColor(item.isDone ? .mint : .orange)
                 }.animation(.easeIn(duration: 0.5))
                 
+                //items view
                 VStack(alignment: .leading){
                     Text(item.title)
                         .font(.title3)
                         .bold()
+//                        .foregroundColor(Color.primary)
                     Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))")
                         .font(.footnote)
                         .foregroundColor(Color(.secondaryLabel))
                 }
                 .padding()
                 .strikethrough(item.isDone ? true : false)
-                .foregroundColor(item.isDone ? .orange : .black)
+                .foregroundColor(item.isDone ? .orange : .primary)
                 .animation(.easeOut(duration: 0.5))
                 Spacer()
             }

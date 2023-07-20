@@ -16,6 +16,7 @@ struct SettingView: View {
         NavigationView{
             
             Form{
+                //view profile
                 Section(header: Text("Profile").bold()) {
                     NavigationLink(destination: ProfileView()) {
                         Text("View Profile")
@@ -24,6 +25,7 @@ struct SettingView: View {
                     }
                 }
                 
+                //light mode or dark mode?
                 Section(header: Text("📲DISPLAY📲").bold(),
                         footer: Text("System setting will use the current device theme.").bold()){
                     Toggle(isOn: $isDarkMode,
@@ -37,6 +39,7 @@ struct SettingView: View {
                     }
                 }
                 
+                //language view
                 Section(header: Text("Language").bold()) {
                     NavigationLink(destination: LanguageSelectionView()) {
                         Text("Change Language")
@@ -44,7 +47,8 @@ struct SettingView: View {
                             .bold()
                     }
                 }
-
+                
+                //attempting log out
                 Section(footer: Text("Please press the button to sign out! 👀")
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(.center)){

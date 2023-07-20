@@ -20,10 +20,10 @@ struct NewItemView: View {
                 .padding()
             
             Form{
-                //Title
+                //Title of telling users to add todos
                 TextField("Enter your todos here! 📝", text: $viewModel.title)
                     .font(.title3)
-                //Due date
+                //due date
                 DatePicker("Due Date", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .tint(.mint)
@@ -38,6 +38,7 @@ struct NewItemView: View {
                 }
                 .padding()
             }
+            //showing alert to user if something is empty
             .alert(isPresented: $viewModel.showAlert){
                 Alert(title: Text("Error"), message: Text("📆Please select the date that is newer than yesterday!🙏"))
             }

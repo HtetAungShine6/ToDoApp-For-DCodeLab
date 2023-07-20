@@ -15,7 +15,7 @@ struct LoginView: View {
         NavigationView{
             VStack{
                 
-                //Header
+                //header view
                 HeaderView(title: "To Do List",
                            subtitle: "Get Things Done",
                            angle: -70,
@@ -23,7 +23,7 @@ struct LoginView: View {
                            background: .mint,
                            background2: .orange)
                 
-                //Login Form
+                //login Form
                 Form{
                     //error message
                     if !viewModel.errorMessage.isEmpty{
@@ -34,7 +34,6 @@ struct LoginView: View {
                     TextField("Email Adress", text: $viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .foregroundColor(Color.primary)
-                    //modifiers
                         .autocapitalization(.none)
                     
                     SecureField("Password", text: $viewModel.password)
@@ -48,7 +47,7 @@ struct LoginView: View {
                 }
                 .offset(y: -50)
                 
-                //Create Account
+                //create account
                 VStack{
                     Text("New user?🤔 Please tap here👇")
                         .foregroundColor(Color.mint)

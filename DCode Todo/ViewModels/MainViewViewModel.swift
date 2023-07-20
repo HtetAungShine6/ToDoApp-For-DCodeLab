@@ -12,7 +12,7 @@ class MainViewViewModel: ObservableObject{
     @Published var currentUserId: String = ""
     private var handler : AuthStateDidChangeListenerHandle?
     
-    //state the current user
+    //handling the state of current user
     init(){
         self.handler = Auth.auth().addStateDidChangeListener{ [weak self] _,user in
             DispatchQueue.main.async {
@@ -21,7 +21,9 @@ class MainViewViewModel: ObservableObject{
         }
     }
     
+    //handling the sign in state
     public var isSignedIn: Bool{
+        //getting the current user
         return Auth.auth().currentUser != nil
     }
 }

@@ -23,6 +23,7 @@ class NewItemViewViewModel : ObservableObject{
         guard canSave else{
             return
         }
+        
         //Get current user id
         guard let uId = Auth.auth().currentUser?.uid else{
             return
@@ -46,6 +47,7 @@ class NewItemViewViewModel : ObservableObject{
             .setData(newItem.asDictionary())
     }
     
+    //condition or validation
     var canSave: Bool{
         guard !title.trimmingCharacters(in: .whitespaces).isEmpty else{
             return false
